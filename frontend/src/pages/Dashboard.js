@@ -96,128 +96,94 @@ export default function Dashboard() {
   
 
   const services = [
-    "Security Services",
-    "Maintenance and Facilities Management",
-    "Transportation and Fleet Management",
-    "Environmental Health and Safety (EHS)",
-    "Custodial Services",
-    "Event Management and Logistics",
-    "Utilities Management"
-  ];
+    "Health and Wellness Services",
+    "Medical Services",
+    "Dental Services",
 
-  const incidentReports = [
+  ];const incidentReports = [
     {
       reportNumber: 1,
       name: "John Doe",
-      location: "Cafeteria",
+      location: "Health Center",
       dateTime: "2024-10-01 14:30",
-      description: "Fire alarm triggered.",
+      description: "Student experiencing severe allergic reaction.",
       image: "https://via.placeholder.com/150",
       status: "Ongoing",
-      service: "Security Services"
+      service: "Medical Services"
     },
     {
       reportNumber: 2,
       name: "Alice Johnson",
-      location: "Room 202",
+      location: "Dental Clinic",
       dateTime: "2024-10-03 11:15",
-      description: "Broken window in room 202.",
+      description: "Patient needs emergency dental extraction.",
       image: "https://via.placeholder.com/150",
       status: "Ongoing",
-      service: "Maintenance and Facilities Management"
+      service: "Dental Services"
     },
     {
       reportNumber: 3,
       name: "Bob Brown",
-      location: "Building Entrance",
+      location: "Health Center",
       dateTime: "2024-10-04 15:45",
-      description: "Power outage in building.",
+      description: "Student reporting flu-like symptoms.",
       image: "https://via.placeholder.com/150",
       status: "Ongoing",
-      service: "Utilities Management"
+      service: "Health and Wellness Services"
     },
     {
       reportNumber: 4,
       name: "Charlie Green",
-      location: "Hallway",
+      location: "Dental Clinic",
       dateTime: "2024-10-05 10:30",
-      description: "Water leakage in hallway.",
+      description: "Routine dental check-up needed for a student.",
       image: "https://via.placeholder.com/150",
       status: "Ongoing",
-      service: "Maintenance and Facilities Management"
+      service: "Dental Services"
     },
     {
       reportNumber: 5,
       name: "Dave Wilson",
-      location: "Parking Lot A",
+      location: "Health Center",
       dateTime: "2024-10-06 08:00",
-      description: "Vehicle parked in a restricted area.",
+      description: "Student fainted due to dehydration.",
       image: "https://via.placeholder.com/150",
       status: "Ongoing",
-      service: "Transportation and Fleet Management"
+      service: "Medical Services"
     },
     {
       reportNumber: 6,
-      name: "Eva Adams",
-      location: "Parking Lot B",
-      dateTime: "2024-10-07 14:20",
-      description: "Accident involving two vehicles.",
+      name: "Frank Turner",
+      location: "Dental Clinic",
+      dateTime: "2024-10-08 10:45",
+      description: "Patient reports toothache.",
       image: "https://via.placeholder.com/150",
       status: "Ongoing",
-      service: "Transportation and Fleet Management"
+      service: "Dental Services"
     },
     {
       reportNumber: 7,
-      name: "Frank Turner",
-      location: "Room 303",
-      dateTime: "2024-10-08 10:45",
-      description: "Broken light in classroom.",
+      name: "Gina Parker",
+      location: "Health Center",
+      dateTime: "2024-10-09 12:00",
+      description: "Student experiencing stress and anxiety.",
       image: "https://via.placeholder.com/150",
       status: "Ongoing",
-      service: "Maintenance and Facilities Management"
+      service: "Health and Wellness Services"
     },
     {
       reportNumber: 8,
-      name: "Gina Parker",
-      location: "Campus Grounds",
-      dateTime: "2024-10-09 12:00",
-      description: "Hazardous waste improperly disposed.",
-      image: "https://via.placeholder.com/150",
-      status: "Ongoing",
-      service: "Environmental Health and Safety (EHS)"
-    },
-    {
-      reportNumber: 9,
       name: "Henry Hill",
-      location: "Science Lab",
+      location: "Dental Clinic",
       dateTime: "2024-10-10 09:30",
-      description: "Chemical spill in the lab.",
+      description: "Patient requires dental cleaning.",
       image: "https://via.placeholder.com/150",
       status: "Ongoing",
-      service: "Environmental Health and Safety (EHS)"
-    },
-    {
-      reportNumber: 10,
-      name: "Irene Lane",
-      location: "Main Hall",
-      dateTime: "2024-10-11 15:00",
-      description: "Event setup for university fair.",
-      image: "https://via.placeholder.com/150",
-      status: "Ongoing",
-      service: "Event Management and Logistics"
-    },
-    {
-      reportNumber: 11,
-      name: "Jack Lee",
-      location: "Library",
-      dateTime: "2024-10-12 11:00",
-      description: "Request for additional cleaning supplies.",
-      image: "https://via.placeholder.com/150",
-      status: "Ongoing",
-      service: "Custodial Services"
+      service: "Dental Services"
     }
   ];
-
+  
+  
   const unresolvedIncidentReports = incidentReports.filter(incident => !resolvedIncidents.some(resolved => resolved.reportNumber === incident.reportNumber));
 
   const sortedIncidentReports = unresolvedIncidentReports
